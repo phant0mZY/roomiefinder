@@ -39,7 +39,7 @@ body {
     color: #ffffff;
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -87,7 +87,7 @@ body {
     height: auto;
 }
 
-/* Features Section */
+
 .features {
     text-align: center;
     padding: 50px;
