@@ -1,0 +1,156 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CF1F30;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #FDEF6D;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #FDEF6D;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    background: linear-gradient(to right, #FDEF6D, #FFD700);
+    height: 100vh;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #CF1F30;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #CF1F30;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #CF1F30;
+    color: #fdda7d;
+    padding: 15px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #8C3321;
+    color: #ffffff;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px;
+    background-color: #cf1f30;
+    color: #FDEF6D;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #CF1F30;
+    margin-top: 15px;
+}
+
+.card p {
+    color: #333;
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 80%;
+    }
+    .hero-image img {
+        max-width: 80%;
+    }
+    .feature-cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

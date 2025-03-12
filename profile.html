@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Roommate Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F4F6F9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            background: #002147;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li a:hover {
+            background: #FF5A5F;
+        }
+
+        .profile-container {
+            max-width: 650px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-header h2 {
+            color: #002147;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .profile-image {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #E3E6EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #555;
+            margin: 0 auto 15px;
+        }
+
+        .profile-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .info-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .info-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #F8F9FA;
+            transition: 0.3s;
+        }
+
+        .info-group input:focus {
+            border-color: #FF5A5F;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 90, 95, 0.2);
+        }
+
+        .save-btn {
+            width: 100%;
+            background: blue;
+            color: white;
+            padding: 14px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+
+        .save-btn:hover {
+            background: #D3474C;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo" style="color:red">Roommate Finder</div>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="search.html">Find Roommates</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">👤</div>
+            <h2>User Profile</h2>
+        </div>
+
+        <form>
+            <div class="profile-info">
+                <div class="info-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="harshit">
+                </div>
+
+                <div class="info-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="harshit@sharma.com">
+                </div>
+
+                <div class="info-group">
+                    <label for="course">Course Name</label>
+                    <input type="text" id="course" name="course" placeholder="Computer Science">
+                </div>
+
+                <div class="info-group">
+                    <label for="sleepTime">Preferred Sleeping Time</label>
+                    <input type="text" id="sleepTime" name="sleepTime" placeholder="11 PM - 7 AM">
+                </div>
+
+                <div class="info-group">
+                    <label for="interests">Interests</label>
+                    <input type="text" id="interests" name="interests" placeholder="Music, Coding, Travel">
+                </div>
+
+                <div class="info-group">
+                    <label for="hobbies">Hobbies</label>
+                    <input type="text" id="hobbies" name="hobbies" placeholder="Guitar,films,Reading">
+                </div>
+            </div>
+
+            <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+    </div>
+
+</body>
+</html>
