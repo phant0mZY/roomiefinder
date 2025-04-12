@@ -1,173 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Roommate Finder</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-    
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #87CEFA, #4682B4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .login-container {
-            display: flex;
-            width: 850px;
-            background: white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        
-        .login-image {
-            width: 45%;
-            background: #1E3A8A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .login-image img {
-            width: 100%;
-            height: 75%;
-            border-radius: 5px;
-        }
-
-       
-        .login-form {
-            width: 55%;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .login-form h2 {
-            margin-bottom: 20px;
-            color: #1E3A8A;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            font-weight: 600;
-            color: #333;
-            display: block;
-            margin-bottom: 6px;
-            font-size: 14px;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        .input-group input:focus {
-            border-color: #1E3A8A;
-            outline: none;
-            box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
-        }
-
-        .login-btn {
-            width: 100%;
-            background: #1E3A8A;
-            color: white;
-            padding: 12px;
-            border: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
-        }
-
-        .login-btn:hover {
-            background: #0F265A;
-            box-shadow: 0 4px 12px rgba(15, 38, 90, 0.3);
-        }
-
-        .extra-links {
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .extra-links a {
-            color: #1E3A8A;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .extra-links a:hover {
-            text-decoration: underline;
-        }
-
-        @media screen and (max-width: 768px) {
-            .login-container {
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .login-image {
-                width: 100%;
-                padding: 30px;
-            }
-
-            .login-form {
-                width: 100%;
-                padding: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Roommate Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="tailwind.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gradient-to-r from-sky-300 to-blue-600 min-h-screen flex items-center justify-center m-0">
+  <div class="flex flex-col md:flex-row bg-white w-[90%] md:w-[850px] shadow-lg rounded-xl overflow-hidden">
+    
 
-    <div class="login-container">
-       
-        <div class="login-image">
-            <img src="E:\roomiefinder\login.jpeg" alt="Login Illustration">
-        </div>
-
-        
-        <div class="login-form">
-            <h2>Welcome Back!</h2>
-            <form action="dashboard.html" method="POST">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="login-btn">Sign In</button>
-            </form>
-            <div class="extra-links">
-                <p><a href="#">Forgot Password?</a> | <a href="signup.html">Create an Account</a></p>
-            </div>
-        </div>
+    <div class="md:w-[45%] w-full bg-blue-900 flex items-center justify-center p-5">
+      <img src="./login.jpeg" alt="Login Illustration" class="w-full h-[75%] rounded-sm object-cover"/>
     </div>
 
+    
+    <div class="md:w-[55%] w-full p-8 flex flex-col justify-center">
+      <h2 class="text-blue-900 text-center text-2xl font-semibold mb-6">Welcome Back!</h2>
+      <form id="loginForm" action="login.php" method="POST" novalidate>
+        <div class="mb-5">
+          <label for="email" class="block font-semibold text-gray-800 mb-1 text-sm">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required
+            class="w-full p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-300 transition duration-200"/>
+        </div>
+        <div class="mb-5">
+          <label for="password" class="block font-semibold text-gray-800 mb-1 text-sm">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required
+            class="w-full p-3 border border-gray-300 rounded-md text-base focus:outline-none focus:border-blue-900 focus:ring-2 focus:ring-blue-300 transition duration-200"/>
+        </div>
+        <button type="submit"
+          class="w-full bg-blue-900 text-white py-3 rounded-md text-lg font-bold shadow-md hover:bg-blue-800 hover:shadow-lg transition duration-300">
+          Sign In
+        </button>
+      </form>
+      <div class="text-center mt-4 text-sm">
+        <a href="#" class="text-blue-900 hover:underline">Forgot Password?</a>
+        <span class="mx-2">|</span>
+        <a href="signup.html" class="text-blue-900 hover:underline">Create an Account</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const passwordRegex = /^.{6,}$/; 
+
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+        return;
+      }
+
+      if (!passwordRegex.test(password)) {
+        alert("Password must be at least 6 characters long.");
+        event.preventDefault();
+        return;
+      }
+    });
+  </script>
 </body>
 </html>
